@@ -31,14 +31,18 @@
 //   return dancer;
 // };
 
-var Dancer = function () {
+var Dancer = function (top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
+  this.top = top;
+  this.left = left;
+  this.timeBetweenSteps = timeBetweenSteps;
 };
 
 Dancer.prototype.step = function( timeBetweenSteps) {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
-  setTimeout(this.step, timeBetweenSteps);
+  debugger;
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
 //Dancer.step();
