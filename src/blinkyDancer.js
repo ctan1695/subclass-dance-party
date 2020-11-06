@@ -21,6 +21,7 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps) {
   debugger;
   Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node = $('<span class="blinkyDancer"></span>');
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
