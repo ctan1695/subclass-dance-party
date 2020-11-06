@@ -1,7 +1,8 @@
 var FadingDancer = function(top, left, timeBetweenSteps) {
   debugger;
   Dancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="fadingDancer"></span>');
+  this.$node.addClass('fadingDancer');
+  this.$node.removeClass('dancer');
 };
 
 FadingDancer.prototype = Object.create(Dancer.prototype);

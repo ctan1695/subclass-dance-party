@@ -31,12 +31,14 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .slidingDancer{
-  border:10px solid rgb(142, 42, 155);
-  border-radius:10px;
+  /*border:10px solid rgb(142, 42, 155);
+  border-radius:10px; */
+  content: url("https://media4.giphy.com/media/l378c85KbzBnSDWW4/giphy.gif");
   position:absolute;
 }
 .fadingDancer{
-  border:10px solid rgb(59, 33, 155);
-  border-radius:10px;
+  /* border:10px solid rgb(59, 33, 155);
+  border-radius:10px; */
+  content:url("https://media.tenor.com/images/d95a59ab1be83a6b8e299d02c82eb02f/tenor.gif");
   position:absolute;
 }
