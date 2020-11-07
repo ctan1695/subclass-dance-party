@@ -10,3 +10,6 @@ BlinkyDancer.prototype.step = function () {
   this.$node.toggle();
 };
 
+BlinkyDancer.prototype.lineUp = function () {
+  this.setPosition(this.top, 100);
+};

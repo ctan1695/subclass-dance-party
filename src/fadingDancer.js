@@ -12,3 +12,7 @@ FadingDancer.prototype.step = function () {
   Dancer.prototype.step.call(this);
   this.$node.fadeToggle();
 };
+
+FadingDancer.prototype.lineUp = function () {
+  this.setPosition(500, this.left);
+};

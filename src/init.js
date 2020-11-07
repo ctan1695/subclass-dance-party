@@ -32,5 +32,12 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
 
   });
+  $('.lineUpButton').on('click', function(event) {
+    // loop through our dancers array
+    for (var i = 0; i < window.dancers.length; i++) {
+      // implement line up method on each dancer
+      window.dancers[i].lineUp();
+    }
+  });
 });
 

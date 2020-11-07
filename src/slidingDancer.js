@@ -12,3 +12,7 @@ SlidingDancer.prototype.step = function () {
   Dancer.prototype.step.call(this);
   this.$node.slideToggle();
 };
+
+SlidingDancer.prototype.lineUp = function () {
+  this.setPosition(this.top, 500);
+};
