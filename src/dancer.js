@@ -36,30 +36,39 @@ var Dancer = function (top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
+  this.name = 'dancer';
   this.step();
   this.setPosition(top, left);
-  console.log('top: ' + top);
-  console.log('left: ' + left);
+  //console.log('top: ' + top);
+  //console.log('left: ' + left);
 };
 
 Dancer.prototype.step = function( timeBetweenSteps) {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
-  debugger;
+  //debugger;
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
 Dancer.prototype.setPosition = function(top, left) {
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
-  //
-  console.log('top: ' + top);
-  console.log('left: ' + left);
   var styleSettings = {
     top: top,
     left: left
   };
   this.$node.css(styleSettings);
-  console.log(' this.$node: ' + this.$node[0].style);
-  //debugger;
+};
+
+
+Dancer.prototype.getDistance = function(turkeyDancer, nonTurkeyDancer) {
+  // distance formula = sqrt((x2-x1)^2 + (y2-y1)^2))
+  var topDiff = Math.abs((turkeyDancer.top - nonTurkeyDancer.top) ^ 2);
+  var leftDiff = Math.abs((turkeyDancer.left - nonTurkeyDancer.left) ^ 2);
+  var distanceBetween = Math.sqrt(topDiff + leftDiff);
+  return distanceBetween;
+};
+
+Dancer.prototype.mouseOver = function(callback) {
+  this.$node.on('mouseover', callback.bind(this));
 };

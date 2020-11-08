@@ -23,12 +23,11 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
 .blinkyDancer{
-  border:10px solid rgb(42, 139, 22);
+  border:10px solid orange;
   border-radius:10px;
   position:absolute;
 }
@@ -37,10 +36,20 @@ body, a:link, a:visited, a:active{
   border-radius:10px; */
   content: url("http://clipart-library.com/image_gallery/199511.gif");
   position:absolute;
+  height: auto;
+  width: 150px;
 }
 .turkeyDancer{
   /* border:10px solid rgb(59, 33, 155);
   border-radius:10px; */
   content:url("https://lh3.googleusercontent.com/proxy/87fikcIm1dVRTSrt8LqF8_RkVJAFVmy8MW6EtBSMoG9L0eRLLL43_Vf26rDBkWITDNyHIjATosWMkq3hg_mXQtnHfqnvRlQ");
   position:absolute;
+  height: auto;
+  width: 300px;
+}
+.pieDancer{
+  content:url("http://clipart-library.com/img1/1105927.png");
+  position:absolute;
+  height: auto;
+  width: 150px;
 }

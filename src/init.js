@@ -21,10 +21,10 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-    debugger;
+    //debugger;
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
 
@@ -32,11 +32,34 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
 
   });
+
   $('.lineUpButton').on('click', function(event) {
     // loop through our dancers array
     for (var i = 0; i < window.dancers.length; i++) {
       // implement line up method on each dancer
       window.dancers[i].lineUp();
+    }
+  });
+
+  $('.avoidTurkeyButton').on('click', function(event) {
+    //find all turkeys in window.dancers
+    for (var i = 0; i < window.dancers.length; i++) {
+      if (window.dancers[i].name === 'turkeyDancer') {
+        var turkey = window.dancers[i];
+
+        for (var t = 0; t < window.dancers.length; t++) {
+          if (window.dancers[t].name !== 'turkeyDancer') {
+            var nonTurkey = window.dancers[t];
+
+            console.log(turkey.getDistance(turkey, nonTurkey));
+
+            if (turkey.getDistance(turkey, nonTurkey) < 50) {
+              nonTurkey.$node.css('display', 'none');
+            }
+          }
+        }
+
+      }
     }
   });
 });
