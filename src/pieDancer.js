@@ -9,10 +9,6 @@ var PieDancer = function(top, left, timeBetweenSteps) {
 PieDancer.prototype = Object.create(Dancer.prototype);
 PieDancer.prototype.constructor = PieDancer;
 
-PieDancer.prototype.step = function () {
-  Dancer.prototype.step.call(this);
-};
-
 PieDancer.prototype.lineUp = function () {
   this.setPosition(50, this.left);
 };
