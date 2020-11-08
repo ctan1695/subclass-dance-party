@@ -16,7 +16,3 @@ TurkeyDancer.prototype.step = function () {
 TurkeyDancer.prototype.lineUp = function () {
   this.setPosition(500, this.left);
 };
-
-TurkeyDancer.prototype.click = function () {
-  this.$node.on('click', this.$node.fadeToggle());
-};

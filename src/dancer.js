@@ -69,6 +69,7 @@ Dancer.prototype.getDistance = function(turkeyDancer, nonTurkeyDancer) {
   return distanceBetween;
 };
 
+//Add mouseOver method
 Dancer.prototype.mouseOver = function(callback) {
   this.$node.on('mouseover', callback.bind(this));
 };
